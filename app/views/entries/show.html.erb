@@ -1,0 +1,149 @@
+<%= @entry.input %>
+<hr>
+<hr>
+<table>
+<% @entry.words.each do |word| %>
+<tr>
+  <td><%= word.text %></td><td><%=word.part_of_speech %></td>
+</tr>
+<% end %>
+</table>
+<br>
+<br>
+<br>
+<%= link_to "Create another Entry", new_entry_path %>
+<br>
+<h1>Part of Speech Legend</h1>
+<table>
+<tr>
+<td>CC </td><td>    Conjunction, coordinating    </td><td>        and, or</td>
+</tr>
+<tr>
+<td>CD </td><td>    Adjective, cardinal number   </td><td>        3, fifteen</td>
+</tr>
+<tr>
+<td>DET</td><td>    Determiner                   </td><td>        this, each, some</td>
+</tr>
+<tr>
+<td>EX </td><td>    Pronoun, existential there   </td><td>        there</td>
+</tr>
+<tr>
+<td>FW </td><td>    Foreign words       <td>    </td>
+</tr>
+<tr>
+<td>IN </td><td>    Preposition / Conjunction    </td><td>        for, of, although, that</td>
+</tr>
+<tr>
+<td>JJ </td><td>    Adjective                    </td><td>        happy, bad</td>
+</tr>
+<tr>
+<td>JJR</td><td>    Adjective, comparative       </td><td>        happier, worse</td>
+</tr>
+<tr>
+<td>JJS</td><td>    Adjective, superlative       </td><td>        happiest, worst</td>
+</tr>
+<tr>
+<td>LS </td><td>    Symbol, list item           </td><td>       A, A.</td>
+</tr>
+<tr>
+<td>MD </td><td>    Verb, modal                 </td><td>       can, could, 'll</td>
+</tr>
+<tr>
+<td>NN </td><td>    Noun                        </td><td>       aircraft, data</td>
+</tr>
+<tr>
+<td>NNP</td><td>    Noun, proper                </td><td>       London, Michael</td>
+</tr>
+<tr>
+<td>NNP</td><td>    Noun, proper, plural        </td><td>       Australians, Methodists</td>
+</tr>
+<tr>
+<td>NNS</td><td>    Noun, plural                </td><td>       women, books</td>
+</tr>
+<tr>
+<td>PDT</td><td>    Determiner, prequalifier    </td><td>       quite, all, half</td>
+</tr>
+<tr>
+<td>POS</td><td>    Possessive                  </td><td>       's, '</td>
+</tr>
+<tr>
+<td>PRP</td><td>    Determiner, possessive second </td><td>       mine, yours</td>
+</tr>
+<tr>
+<td>PRPS</td><td>    Determiner, possessive       </td><td>        their, your</td>
+</tr>
+<tr>
+<td>RB </td><td>    Adverb                        </td><td>       often, not, very, here</td>
+</tr>
+<tr>
+<td>RBR</td><td>    Adverb, comparative           </td><td>       faster</td>
+</tr>
+<tr>
+<td>RBS</td><td>    Adverb, superlative           </td><td>       fastest</td>
+</tr>
+<tr>
+<td>RP </td><td>    Adverb, particle              </td><td>       up, off, out</td>
+</tr>
+<tr>
+<td>SYM</td><td>    Symbol                        </td><td>       *</td>
+</tr>
+<tr>
+<td>TO </td><td>    Preposition                   </td><td>       to</td>
+</tr>
+<tr>
+<td>UH </td><td>    Interjection                  </td><td>       oh, yes, mmm</td>
+</tr>
+<tr>
+<td>VB </td><td>    Verb, infinitive              </td><td>       take, live</td>
+</tr>
+<tr>
+<td>VBD</td><td>    Verb, past tense              </td><td>       took, lived</td>
+</tr>
+<tr>
+<td>VBG</td><td>    Verb, gerund                  </td><td>       taking, living</td>
+</tr>
+<tr>
+<td>VBN</td><td>    Verb, past/passive participle </td><td>       taken, lived</td>
+</tr>
+<tr>
+<td>VBP</td><td>    Verb, base present form             </td><td>  take, live</td>
+</tr>
+<tr>
+<td>VBZ</td><td>    Verb, present 3SG -s form           </td><td>  takes, lives</td>
+</tr>
+<tr>
+<td>WDT</td><td>    Determiner, question                </td><td>  which, whatever</td>
+</tr>
+<tr>
+<td>WP </td><td>    Pronoun, question                   </td><td>  who, whoever</td>
+</tr>
+<tr>
+<td>WPS</td><td>    Determiner, possessive & question   </td><td>  whose</td>
+</tr>
+<tr>
+<td>WRB</td><td>    Adverb, question                    </td><td>  when, how, however</td>
+</tr>
+<tr>
+<td>PP </td><td>    Punctuation, sentence ender         </td><td>  ., !, ?</td>
+</tr>
+<tr>
+<td>PPC</td><td>    Punctuation, comma                  </td><td>  ,</td>
+</tr>
+<tr>
+<td>PPD</td><td>    Punctuation, dollar sign            </td><td>  $</td>
+</tr>
+<tr>
+<td>PPL</td><td>    Punctuation, quotation mark left    </td><td>  ``</td>
+</tr>
+<tr>
+<td>PPR</td><td>    Punctuation, quotation mark right   </td><td>  ''</td>
+</tr>
+<tr>
+<td>PPS</td><td>    Punctuation, colon, semicolon, elipsis</td><td>  :, ..., -</td>
+</tr></td><td>
+<tr></td><td>
+<td>LRB</td><td>    Punctuation, left bracket             </td><td>  (, {, [</td>
+<tr>
+<td>RRB</td> <td>   Punctuation, right bracket        </td><td>      ), }, ]</td>
+</tr>
+</table>
