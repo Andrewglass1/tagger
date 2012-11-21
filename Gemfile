@@ -9,6 +9,7 @@ gem 'rails', '3.2.8'
 gem 'engtagger'
 gem 'nokogiri'
 gem 'pg'
+gem 'heroku'
 
 
 # Gems used only for assets and not required

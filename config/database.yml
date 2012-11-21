@@ -28,12 +28,12 @@ production:
   encoding: unicode
   database: tagger_production
   pool: 5
-  username: postgres
-  password: ""
+  username: postgresql
+  password: postgresql
 development:
   adapter: postgresql
   encoding: unicode
   database: tagger_development
   pool: 5
-  username: postgres
-  password: ""
+  username: postgresql
+  password: postgresql
