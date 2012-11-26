@@ -10,6 +10,7 @@
 <%= link_to article.headline, create_from_article_path(:article_id => article.id) %>
 <% end %>
 
+<h1> or paste the link to an nyt article</h1>
 <%= form_for(@article) do |f| %>
 <%= f.text_area :link, :size => "65x1", :placeholder => "Copy/Paste a Link to an Article Here" %>
 <%= f.submit %>
