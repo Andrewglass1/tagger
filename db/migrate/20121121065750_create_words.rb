@@ -4,6 +4,7 @@ class CreateWords < ActiveRecord::Migration
       t.text :text
       t.string :part_of_speech
       t.integer :entry_id
+      t.integer :count
 
       t.timestamps
     end

@@ -5,8 +5,9 @@ class EntriesController < ApplicationController
 
   def new
     @entry = Entry.new
+    @article = Article.new
   end
-  
+
   def create
     @entry = Entry.new(params[:entry])
     if @entry.save
@@ -15,4 +16,9 @@ class EntriesController < ApplicationController
       render action: "new"
     end    
   end
+
+  def index
+    @entries = Entry.all
+  end 
+  
 end

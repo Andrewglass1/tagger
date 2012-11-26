@@ -3,3 +3,14 @@
 <%= f.text_area :input, :size => "65x10"%>
 <%= f.submit %>
 <% end %>
+<br>
+<h1> or select a nyt article</h1>
+
+<% Article.all[0..10].each do |article| %>
+<%= link_to article.headline, create_from_article_path(:article_id => article.id) %>
+<% end %>
+
+<%= form_for(@article) do |f| %>
+<%= f.text_area :link, :size => "65x1", :placeholder => "Copy/Paste a Link to an Article Here" %>
+<%= f.submit %>
+<% end %>

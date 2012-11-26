@@ -4,7 +4,7 @@
 <table>
 <% @entry.words.each do |word| %>
 <tr>
-  <td><%= word.text %></td><td><%=word.part_of_speech %></td>
+  <td><%= word.text %></td><td><%=word.part_of_speech %></td><td>count:<%= word.count %></td>
 </tr>
 <% end %>
 </table>

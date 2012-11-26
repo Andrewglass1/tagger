@@ -2,6 +2,9 @@ Tagger::Application.routes.draw do
 
   resources :entries
   root :to => 'entries#new'
+  resources :articles
+
+  match 'create_from_article' => 'articles#create_entry', :as => 'create_from_article'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

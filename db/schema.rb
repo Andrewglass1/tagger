@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121121065750) do
+ActiveRecord::Schema.define(:version => 20121124053843) do
+
+  create_table "articles", :force => true do |t|
+    t.string   "link"
+    t.text     "headline"
+    t.string   "author"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "entries", :force => true do |t|
     t.text     "input"
@@ -23,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20121121065750) do
     t.text     "text"
     t.string   "part_of_speech"
     t.integer  "entry_id"
+    t.integer  "count"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

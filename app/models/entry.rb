@@ -11,7 +11,10 @@ class Entry < ActiveRecord::Base
     tagged = parser.get_readable(input)
     tagged.split(" ").each do |wordpair|
       split_pair = wordpair.split("/")
-      Word.create(text: split_pair[0], part_of_speech: split_pair[1], entry_id: self.id)
+      word = Word.find_or_create_by_text_and_entry_id(text: split_pair[0], part_of_speech: split_pair[1], entry_id: self.id, count: 0)
+      word.count += 1
+      word.save!
     end
   end
+
 end
